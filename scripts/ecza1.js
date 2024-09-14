@@ -11,7 +11,6 @@
 
 (function () {
     'use strict';
-    console.log('corehi');
     const getStoreListWrapper = () => {
       return document.querySelector('.container #userList');
     };
@@ -21,7 +20,7 @@
       );
       return savedProducts ? JSON.parse(savedProducts) : [];
     };
-  
+
     const addProduct = ({target}) => {
       target.innerText = 'Eklendi';
       const products = getProducts();
@@ -62,7 +61,6 @@
               .replace(' TL', '')
               .replace(',', '.'),
           );
-          console.log('selam');
           const dataPid = wrapper.querySelector('input[data-pid]').attributes['data-pid'].value;
           const productURL = `https://www.ecza1.com/Shop/UserProductDetail?id=${dataPid}`;
           products.push({
